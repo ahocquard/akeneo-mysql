@@ -8,10 +8,13 @@ Goal of this repository is to use the new available features in Mysql 8.0 with A
 
 ## Installation
 
+Available catalogs are "icecat_dump" or "eighty_pourcent_dump".
+
 ```
+$ CATALOG=icecat_dump
 $ LOCAL_MYSQL_PORT=3306
 $ docker run -d --name mysql-new-features -p ${LOCAL_MYSQL_PORT}:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=akeneo_pim -e MYSQL_PASSWORD=akeneo_pim -e MYSQL_DATABASE=akeneo_pim mysql:8.0.11
-wget -O - https://github.com/ahocquard/akeneo-mysql/raw/master/akeneo_dump.sql.gz | gunzip | docker exec -i mysql-new-features /usr/bin/mysql -u akeneo_pim --password=akeneo_pim akeneo_pim
+$ wget -O - https://github.com/ahocquard/akeneo-mysql/raw/master/${CATALOG}.sql.gz | gunzip | docker exec -i mysql-new-features /usr/bin/mysql -u akeneo_pim --password=akeneo_pim akeneo_pim
 ```
 
 Then, open the mysql client:
