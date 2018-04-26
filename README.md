@@ -8,7 +8,7 @@ Goal of this repository is to use the new available features in Mysql 8.0 with A
 
 ## Installation
 
-Available catalogs are "icecat_dump" or "eighty_pourcent_dump".
+Available catalogs are "icecat_dump" or "eighty_percent_dump".
 
 ```
 $ CATALOG=icecat_dump
