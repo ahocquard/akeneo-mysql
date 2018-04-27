@@ -10,6 +10,11 @@ Goal of this repository is to use the new available features in Mysql 8.0 with A
 
 Available catalogs are "icecat_dump" or "eighty_percent_dump".
 
+The first one is the default catalog installed by the PIM.
+The second one is a biggest catalog, having 5000 categories, 125 families having 100 attributes, almost 1000 products with approximately 380 product values per products.
+
+This catalog were generated in PIM 2.1.
+
 ```
 $ CATALOG=icecat_dump
 $ LOCAL_MYSQL_PORT=3306
@@ -87,7 +92,7 @@ SELECT * FROM category_tree;
 |10	 |audio_video	  |["master"]         |
 
 
-## Variant products with inherited values from product models
+### Variant products with inherited values from product models
 
 ```
 WITH RECURSIVE complete_variant_products AS
