@@ -124,7 +124,7 @@ FROM (
 GROUP BY path.node_code;
 ```
 
-### Categories with associations
+### Categories with translations
 
 As translations is not mandatory, we have to use a `LEFT JOIN`.
 The reason is that `ct.locale` can be `null`, preventing us to use `JSON_OBJECTAGG`, because it would mean that the key could be null, which is not allowed with JSON.
